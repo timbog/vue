@@ -684,6 +684,9 @@ export function createPatchFunction(backend) {
     inVPre = inVPre || (data && data.pre)
     vnode.elm = elm
 
+    console.log('elm', elm)
+    console.log('vnode', vnode)
+    console.log('inVpre', inVPre)
     if (isTrue(vnode.isComment) && isDef(vnode.asyncFactory)) {
       vnode.isAsyncPlaceholder = true
       return true
